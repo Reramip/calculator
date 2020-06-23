@@ -181,7 +181,7 @@ export default class Calculator extends React.Component {
   componentWillUnmount(){
     const buttons=document.getElementsByTagName("button");
     for(let i=0;i<buttons.length;++i){
-      buttons[i].addEventListener("click", this.handleClick);
+      buttons[i].removeEventListener("click", this.handleClick);
     }
   }
 
