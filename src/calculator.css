@@ -1,28 +1,41 @@
+:root{
+  --width:400px;
+  --display-line-height: 1.3rem;
+  --input-color:#F3F1ED;
+  --formula-color:#E29B8C;
+  --text-color:#E4DDCC;
+  --button-color:#47474A;
+  --special-button-color:#C1685D;
+}
+
 #calculator {
   text-align: center;
 }
 
 #display{
-  width:400px;
-  background-color: #47474A;
-  color:#F3F1ED;
+  width:var(--width);
+  background-color: var(--button-color);
   text-align: right;
   padding: 0.5rem 0;
+  line-height: var(--display-line-height);
+  overflow-wrap: break-word;
 }
 
 #display-formula{
-  color:#E29B8C;
-  margin:0 1rem;
+  color:var(--formula-color);
+  min-height: var(--display-line-height);
+  margin: 0 0.6rem;
 }
 
 #display-input{
-  color:#F3F1ED;
+  color:var(--input-color);
   font-size:1.3rem;
-  margin:0 1rem;
+  min-height: var(--display-line-height);
+  margin: 0 0.6rem;
 }
 
 #buttons {
-  width: 400px;
+  width: var(--width);
   height:380px;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
@@ -36,20 +49,20 @@
 }
 
 button{
-  background-color:#47474A;
-  color:#E4DDCC;
+  background-color:var(--button-color);
+  color:var(--text-color);
   font-size: 1.1rem;
   border: 0;
 }
 
 #clear{
   grid-area: clear;
-  background-color: #C1685D;
+  background-color: var(--special-button-color);
 }
 
 #equals{
   grid-area: equals;
-  background-color: #C1685D;
+  background-color: var(--special-button-color);
 }
 
 #add{
